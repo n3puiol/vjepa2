@@ -20,20 +20,13 @@ def get_requirements():
 
 if __name__ == "__main__":
     requirements = get_requirements()
-
-    if sys.platform == 'darwin':
-        if sys.version_info != (3, 11):
-            raise RuntimeError("V-JEPA 2 requires Python 3.11 on macOS.")
-        requirements.append("eva-decord")
-    else:
-        requirements.append("decord")
-
+    requirements.append("eva-decord") if sys.platform == 'darwin' else requirements.append("decord")
 
     setup(
         name=NAME,
         version=VERSION,
         description=DESCRIPTION,
         url=URL,
-        python_requires=">=3.11",
+        python_requires=">=3.11, <3.12" if sys.platform == 'darwin' else ">=3.11",
         install_requires=requirements,
     )
