@@ -3,6 +3,7 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
+import sys
 from setuptools import setup
 
 NAME = "vjepa2"
@@ -18,11 +19,21 @@ def get_requirements():
 
 
 if __name__ == "__main__":
+    requirements = get_requirements()
+
+    if sys.platform == 'darwin':
+        if sys.version_info != (3, 11):
+            raise RuntimeError("V-JEPA 2 requires Python 3.11 on macOS.")
+        requirements.append("eva-decord")
+    else:
+        requirements.append("decord")
+
+
     setup(
         name=NAME,
         version=VERSION,
         description=DESCRIPTION,
         url=URL,
         python_requires=">=3.11",
-        install_requires=get_requirements(),
+        install_requires=requirements,
     )
