@@ -25,9 +25,9 @@ dataset = LeRobotDataset("lerobot/droid_100", delta_timestamps=delta_timestamps)
 optimizer = torch.optim.AdamW(decoder.parameters(), lr=1e-4, weight_decay=0.1)
 dataloader = torch.utils.data.DataLoader(
     dataset,
-    # num_workers=4,
-    # batch_size=1024,
-    batch_size=2,
+    num_workers=4,
+    batch_size=1024,
+    # batch_size=2,
     shuffle=True,
     pin_memory=device.type != "cpu",
     drop_last=True,
