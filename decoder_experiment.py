@@ -14,6 +14,8 @@ hf_repo = "facebook/vjepa2-vitl-fpc64-256"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = AutoModel.from_pretrained(hf_repo).to(device)
+for param in model.parameters():
+    param.requires_grad = False
 processor = AutoVideoProcessor.from_pretrained(hf_repo)
 decoder = VJEPA2Decoder(model.config).to(device)
 
@@ -30,7 +32,7 @@ dataloader = torch.utils.data.DataLoader(
     dataset,
     # num_workers=4,
     # batch_size=1024,
-    batch_size=1,
+    batch_size=32,
     shuffle=True,
     pin_memory=device.type != "cpu",
     drop_last=True,
@@ -56,7 +58,8 @@ for step in range(num_steps):
         images = batch[camera_key]
         pixel_values = processor(images, return_tensors="pt")["pixel_values_videos"].to(model.device)
 
-        outputs = model(pixel_values, skip_predictor=True)
+        with torch.no_grad():
+            outputs = model(pixel_values, skip_predictor=True)
         reconstructed = decoder(outputs.last_hidden_state)
 
         loss = torch.nn.functional.mse_loss(reconstructed, pixel_values)
