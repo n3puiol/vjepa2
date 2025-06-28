@@ -65,7 +65,7 @@ class VJEPA2Decoder(nn.Module):
                     num_attention_heads=config.num_attention_heads,
                     mlp_ratio=config.mlp_ratio,
                 )
-                for i in range(config.num_hidden_layers)
+                for i in range(6)
             ]
         )
 
