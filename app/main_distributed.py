@@ -14,8 +14,8 @@ from pathlib import Path
 import submitit
 import yaml
 
-from app.scaffold import main as app_main
-from src.utils.logging import get_logger, git_information
+from vjepa2.app.scaffold import main as app_main
+from vjepa2.src.utils.logging import get_logger, git_information
 
 logger = get_logger(force=True)
 

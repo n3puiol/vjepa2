@@ -9,7 +9,7 @@ import torch
 from scipy.spatial.transform import Rotation
 from tqdm import tqdm
 
-from src.utils.logging import get_logger
+from vjepa2.src.utils.logging import get_logger
 
 logger = get_logger(__name__, force=True)
 

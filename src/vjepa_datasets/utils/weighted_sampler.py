@@ -10,7 +10,7 @@ import numpy as np
 import torch
 from torch.utils.data import DistributedSampler, RandomSampler
 
-from src.utils.logging import get_logger
+from vjepa2.src.utils.logging import get_logger
 
 logger = get_logger("WeightedSampler")
 
@@ -180,7 +180,7 @@ class MemoryEfficientDistributedWeightedSampler(DistributedSampler):
             self.drawn_samples += 1
 
         # Getting the index of the sample in the whole dataset
-        # For example if the total dataset has 4 datasets with sizes [10, 20, 30, 5].
+        # For example if the total dataset has 4 vjepa_datasets with sizes [10, 20, 30, 5].
         # and our selected_dataset_idx=3 and sample_idx_in_dataset=5
         # then the index of the sample in the whole dataset is
         #   10 (for dataset 1) + 20 (for dataset 1) + 5 (for sample_idx_in_dataset) = 35
@@ -320,7 +320,7 @@ class MemoryEfficientDistributedWeightedSamplerLessRepeat(DistributedSampler):
             self.drawn_samples += 1
 
         # Getting the index of the sample in the whole dataset
-        # For example if the total dataset has 4 datasets with sizes [10, 20, 30, 5].
+        # For example if the total dataset has 4 vjepa_datasets with sizes [10, 20, 30, 5].
         # and our selected_dataset_idx=3 and sample_idx_in_dataset=5
         # then the index of the sample in the whole dataset is
         #   10 (for dataset 1) + 20 (for dataset 1) + 5 (for sample_idx_in_dataset) = 35

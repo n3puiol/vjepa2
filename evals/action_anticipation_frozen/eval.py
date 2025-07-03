@@ -25,14 +25,14 @@ import torch
 import torch.multiprocessing as mp
 from torch.nn.parallel import DistributedDataParallel
 
-from evals.action_anticipation_frozen.dataloader import filter_annotations, init_data
-from evals.action_anticipation_frozen.losses import sigmoid_focal_loss
-from evals.action_anticipation_frozen.metrics import ClassMeanRecall
-from evals.action_anticipation_frozen.models import init_classifier, init_module
-from evals.action_anticipation_frozen.utils import init_opt
-from src.utils.checkpoint_loader import robust_checkpoint_loader
-from src.utils.distributed import init_distributed
-from src.utils.logging import AverageMeter, CSVLogger
+from vjepa2.evals.action_anticipation_frozen.dataloader import filter_annotations, init_data
+from vjepa2.evals.action_anticipation_frozen.losses import sigmoid_focal_loss
+from vjepa2.evals.action_anticipation_frozen.metrics import ClassMeanRecall
+from vjepa2.evals.action_anticipation_frozen.models import init_classifier, init_module
+from vjepa2.evals.action_anticipation_frozen.utils import init_opt
+from vjepa2.src.utils.checkpoint_loader import robust_checkpoint_loader
+from vjepa2.src.utils.distributed import init_distributed
+from vjepa2.src.utils.logging import AverageMeter, CSVLogger
 
 logging.basicConfig()
 logger = logging.getLogger()

@@ -11,7 +11,7 @@ from typing import Any
 import torch
 from torch.serialization import MAP_LOCATION
 
-from src.utils.logging import get_logger
+from vjepa2.src.utils.logging import get_logger
 
 logger = get_logger(os.path.basename(__file__))
 

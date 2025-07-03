@@ -40,7 +40,7 @@ def init_data(
     log_dir=None,
 ):
     if data.lower() == "imagenet":
-        from src.datasets.imagenet1k import make_imagenet1k
+        from vjepa2.src.vjepa_datasets.imagenet1k import make_imagenet1k
 
         dataset, data_loader, dist_sampler = make_imagenet1k(
             transform=transform,
@@ -59,7 +59,7 @@ def init_data(
         )
 
     elif data.lower() == "videodataset":
-        from src.datasets.video_dataset import make_videodataset
+        from vjepa2.src.vjepa_datasets.video_dataset import make_videodataset
 
         dataset, data_loader, dist_sampler = make_videodataset(
             data_paths=root_path,

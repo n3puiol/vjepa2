@@ -25,7 +25,7 @@ from typing import Optional
 import numpy as np
 import torch
 
-from src.utils.logging import get_logger
+from vjepa2.src.utils.logging import get_logger
 
 logger = get_logger("worker_init_fn")
 

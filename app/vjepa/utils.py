@@ -10,11 +10,11 @@ import warnings
 import torch
 import yaml
 
-import src.models.predictor as vit_pred
-import src.models.vision_transformer as video_vit
-from src.utils.checkpoint_loader import robust_checkpoint_loader
-from src.utils.schedulers import CosineWDSchedule, WarmupCosineSchedule
-from src.utils.wrappers import MultiSeqWrapper, PredictorMultiSeqWrapper
+import vjepa2.src.models.predictor as vit_pred
+import vjepa2.src.models.vision_transformer as video_vit
+from vjepa2.src.utils.checkpoint_loader import robust_checkpoint_loader
+from vjepa2.src.utils.schedulers import CosineWDSchedule, WarmupCosineSchedule
+from vjepa2.src.utils.wrappers import MultiSeqWrapper, PredictorMultiSeqWrapper
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logger = logging.getLogger()

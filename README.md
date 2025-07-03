@@ -422,9 +422,9 @@ python -m app.main_distributed \
 
 The majority of V-JEPA 2 is licensed under MIT, however portions of the project are available under separate license terms:
 
-[src/datasets/utils/video/randaugment.py](src/datasets/utils/video/randaugment.py)<br>
-[src/datasets/utils/video/randerase.py](src/datasets/utils/video/randerase.py)<br>
-[src/datasets/utils/worker_init_fn.py](src/datasets/utils/worker_init_fn.py)<br>
+[src/datasets/utils/video/randaugment.py](src/vjepa_datasets/utils/video/randaugment.py)<br>
+[src/datasets/utils/video/randerase.py](src/vjepa_datasets/utils/video/randerase.py)<br>
+[src/datasets/utils/worker_init_fn.py](src/vjepa_datasets/utils/worker_init_fn.py)<br>
 
 are licensed under the Apache 2.0 license.
 

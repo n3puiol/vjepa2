@@ -26,13 +26,13 @@ import torch.multiprocessing as mp
 import torch.nn.functional as F
 from torch.nn.parallel import DistributedDataParallel
 
-from app.vjepa.transforms import make_transforms
-from app.vjepa.utils import init_opt, init_video_model, load_checkpoint
-from src.datasets.data_manager import init_data
-from src.masks.multiseq_multiblock3d import MaskCollator
-from src.masks.utils import apply_masks
-from src.utils.distributed import init_distributed
-from src.utils.logging import AverageMeter, CSVLogger, get_logger, gpu_timer
+from vjepa2.app.vjepa.transforms import make_transforms
+from vjepa2.app.vjepa.utils import init_opt, init_video_model, load_checkpoint
+from vjepa2.src.vjepa_datasets.data_manager import init_data
+from vjepa2.src.masks.multiseq_multiblock3d import MaskCollator
+from vjepa2.src.masks.utils import apply_masks
+from vjepa2.src.utils.distributed import init_distributed
+from vjepa2.src.utils.logging import AverageMeter, CSVLogger, get_logger, gpu_timer
 
 # --
 log_timings = True
@@ -100,7 +100,7 @@ def main(args, resume_preempt=False):
     # -- DATA
     cfgs_data = args.get("data")
     dataset_type = cfgs_data.get("dataset_type", "videodataset")
-    dataset_paths = cfgs_data.get("datasets", [])
+    dataset_paths = cfgs_data.get("vjepa_datasets", [])
     datasets_weights = cfgs_data.get("datasets_weights")
     dataset_fpcs = cfgs_data.get("dataset_fpcs")
     max_num_frames = max(dataset_fpcs)

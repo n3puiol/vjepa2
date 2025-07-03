@@ -7,7 +7,7 @@ import unittest
 
 import torch
 
-from src.models.vision_transformer import VIT_EMBED_DIMS, vit_tiny
+from vjepa2.src.models.vision_transformer import VIT_EMBED_DIMS, vit_tiny
 
 
 class TestImageViT(unittest.TestCase):

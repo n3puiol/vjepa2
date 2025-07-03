@@ -5,7 +5,7 @@
 
 import unittest
 
-from src.datasets.utils.dataloader import ConcatIndices
+from vjepa2.src.vjepa_datasets.utils.dataloader import ConcatIndices
 
 
 class TestConcatIndices(unittest.TestCase):

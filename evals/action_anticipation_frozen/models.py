@@ -9,7 +9,7 @@ import logging
 import torch
 import torch.nn as nn
 
-from src.models.attentive_pooler import AttentivePooler
+from vjepa2.src.models.attentive_pooler import AttentivePooler
 
 logging.basicConfig()
 logger = logging.getLogger()

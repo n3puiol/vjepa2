@@ -13,11 +13,11 @@ import torch
 from torch.utils.data import _utils
 from torch.utils.data.dataloader import ExceptionWrapper, _DatasetKind, _MultiProcessingDataLoaderIter
 
-from src.utils.monitoring import ResourceMonitoringThread
+from vjepa2.src.utils.monitoring import ResourceMonitoringThread
 
 
 class ConcatIndices:
-    """Helper to map indices of concatenated/mixed datasets to the sample index for the corresponding dataset."""
+    """Helper to map indices of concatenated/mixed vjepa_datasets to the sample index for the corresponding dataset."""
 
     cumulative_sizes: np.ndarray
 

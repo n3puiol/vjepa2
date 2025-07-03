@@ -13,10 +13,10 @@ import torch.nn.functional as F
 from decord import VideoReader
 from transformers import AutoModel, AutoVideoProcessor
 
-import src.datasets.utils.video.transforms as video_transforms
-import src.datasets.utils.video.volume_transforms as volume_transforms
-from src.models.attentive_pooler import AttentiveClassifier
-from src.models.vision_transformer import vit_giant_xformers_rope
+import vjepa2.src.vjepa_datasets.utils.video.transforms as video_transforms
+import vjepa2.src.vjepa_datasets.utils.video.volume_transforms as volume_transforms
+from vjepa2.src.models.attentive_pooler import AttentiveClassifier
+from vjepa2.src.models.vision_transformer import vit_giant_xformers_rope
 
 IMAGENET_DEFAULT_MEAN = (0.485, 0.456, 0.406)
 IMAGENET_DEFAULT_STD = (0.229, 0.224, 0.225)

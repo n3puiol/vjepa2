@@ -10,10 +10,10 @@ import sys
 
 import torch
 
-import src.models.ac_predictor as vit_ac_pred
-import src.models.vision_transformer as video_vit
-from src.utils.checkpoint_loader import robust_checkpoint_loader
-from src.utils.schedulers import CosineWDSchedule, WSDSchedule
+import vjepa2.src.models.ac_predictor as vit_ac_pred
+import vjepa2.src.models.vision_transformer as video_vit
+from vjepa2.src.utils.checkpoint_loader import robust_checkpoint_loader
+from vjepa2.src.utils.schedulers import CosineWDSchedule, WSDSchedule
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logger = logging.getLogger()

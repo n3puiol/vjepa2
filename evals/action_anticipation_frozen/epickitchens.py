@@ -19,7 +19,7 @@ from decord import VideoReader, cpu
 from torch.utils.data import DataLoader, IterableDataset
 from torch.utils.data.distributed import DistributedSampler
 
-from src.datasets.utils.worker_init_fn import pl_worker_init_function
+from vjepa2.src.vjepa_datasets.utils.worker_init_fn import pl_worker_init_function
 
 multiprocessing.set_start_method("spawn", force=True)
 

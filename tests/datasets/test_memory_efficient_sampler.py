@@ -5,7 +5,7 @@
 
 import unittest
 
-from src.datasets.utils.weighted_sampler import (
+from vjepa2.src.vjepa_datasets.utils.weighted_sampler import (
     MemoryEfficientDistributedWeightedSampler,
     MemoryEfficientDistributedWeightedSamplerLessRepeat,
 )

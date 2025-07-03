@@ -15,8 +15,8 @@ import torch
 import torchvision
 from decord import VideoReader, cpu
 
-from src.datasets.utils.dataloader import ConcatIndices, MonitoredDataset, NondeterministicDataLoader
-from src.datasets.utils.weighted_sampler import DistributedWeightedSampler
+from vjepa2.src.vjepa_datasets.utils.dataloader import ConcatIndices, MonitoredDataset, NondeterministicDataLoader
+from vjepa2.src.vjepa_datasets.utils.weighted_sampler import DistributedWeightedSampler
 
 _GLOBAL_SEED = 0
 logger = getLogger()
@@ -170,7 +170,7 @@ class VideoDataset(torch.utils.data.Dataset):
                 try:
                     data = pd.read_csv(data_path, header=None, delimiter=" ")
                 except pd.errors.ParserError:
-                    # In image captioning datasets where we have space, we use :: as delimiter.
+                    # In image captioning vjepa_datasets where we have space, we use :: as delimiter.
                     data = pd.read_csv(data_path, header=None, delimiter="::")
                 samples += list(data.values[:, 0])
                 labels += list(data.values[:, 1])

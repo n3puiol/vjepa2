@@ -13,7 +13,7 @@ experiment:
   data:
     dataset_name: ImageNet
     num_classes: 1000
-    root_path: /datasets/
+    root_path: /vjepa_datasets/
     image_folder: ImageNet_FullSize/240712/061417/
     resolution: 384
   optimization:

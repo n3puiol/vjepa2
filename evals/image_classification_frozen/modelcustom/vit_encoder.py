@@ -28,7 +28,7 @@ import logging
 
 import torch
 
-import src.models.vision_transformer as vit
+import vjepa2.src.models.vision_transformer as vit
 
 logging.basicConfig()
 logger = logging.getLogger()

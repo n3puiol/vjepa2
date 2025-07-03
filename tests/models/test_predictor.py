@@ -7,7 +7,7 @@ import unittest
 
 import torch
 
-from src.models.predictor import VisionTransformerPredictor
+from vjepa2.src.models.predictor import VisionTransformerPredictor
 
 
 class TestImagePredictorMaskTokens(unittest.TestCase):

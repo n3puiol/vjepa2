@@ -8,9 +8,9 @@ import unittest
 import numpy as np
 import torch
 
-from app.vjepa import transforms
-from src.datasets.utils.video import functional
-from src.datasets.utils.video.volume_transforms import ClipToTensor
+from vjepa2.app.vjepa import transforms
+from vjepa2.src.vjepa_datasets.utils.video import functional
+from vjepa2.src.vjepa_datasets.utils.video.volume_transforms import ClipToTensor
 
 
 class TestNormalize(unittest.TestCase):

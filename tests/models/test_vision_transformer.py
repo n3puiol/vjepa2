@@ -10,7 +10,7 @@ import numpy as np
 import pytest
 import torch
 
-from src.models.vision_transformer import vit_giant_xformers_rope
+from vjepa2.src.models.vision_transformer import vit_giant_xformers_rope
 
 
 # Usage: pytest tests/models/test_vision_transformer.py

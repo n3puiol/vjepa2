@@ -11,8 +11,8 @@ import time
 import submitit
 import yaml
 
-from evals.scaffold import main as eval_main
-from src.utils.logging import get_logger
+from vjepa2.evals.scaffold import main as eval_main
+from vjepa2.src.utils.logging import get_logger
 
 logger = get_logger(force=True)
 

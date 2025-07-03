@@ -9,11 +9,11 @@ from logging import getLogger
 import torch
 import torchvision.transforms as transforms
 
-import src.datasets.utils.video.transforms as video_transforms
-import src.datasets.utils.video.volume_transforms as volume_transforms
-from evals.action_anticipation_frozen.epickitchens import filter_annotations as ek100_filter_annotations
-from evals.action_anticipation_frozen.epickitchens import make_webvid as ek100_make_webvid
-from src.datasets.utils.video.randerase import RandomErasing
+import vjepa2.src.vjepa_datasets.utils.video.transforms as video_transforms
+import vjepa2.src.vjepa_datasets.utils.video.volume_transforms as volume_transforms
+from vjepa2.evals.action_anticipation_frozen.epickitchens import filter_annotations as ek100_filter_annotations
+from vjepa2.evals.action_anticipation_frozen.epickitchens import make_webvid as ek100_make_webvid
+from vjepa2.src.vjepa_datasets.utils.video.randerase import RandomErasing
 
 _GLOBAL_SEED = 0
 logger = getLogger()
